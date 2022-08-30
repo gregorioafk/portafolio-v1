@@ -10,8 +10,8 @@ export const ModelRender = ({ children }) => {
         camera={{ position: [1, 0, 12.25], fov: 15 }}
         style={{
           backgroundColor: "#142615",
-          width: "30rem",
-          height: "30rem",
+          width: "20rem",
+          height: "20rem",
         }}
       >
         <ambientLight intensity={1.25} />

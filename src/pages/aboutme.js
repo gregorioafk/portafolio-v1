@@ -3,41 +3,60 @@ import React from "react";
 import { ModelRender } from "../components/Canvas";
 import { Text } from "../context/LanguageContext";
 
+const tecnologies = [
+  "Javascript (ES6+)",
+  "Typescript",
+  "React",
+  "React Native",
+  "Node.js",
+  "C#",
+  "Java",
+  "SQL",
+];
+
 export const AboutMe = () => {
   return (
-    <div className="flex flex-row">
-      <div className="flex flex-col font-mono ml-24 mt-32 ">
+    <div className="flex lg:flex-row sm:flex-col ">
+      <div className="flex flex-col font-mono lg:ml-32 ">
         <div>
-          <ol className="flex flex-row gap-12  list-decimal">
-            <li className="text-green-subtitle-v1 text-4xl ">
+          <ol className="flex flex-row lg:gap-12 lg:ml-14  list-decimal after:bg-green-subtitle-v1 after:w-2/4  after:h-0.5 items-center">
+            <li className="text-green-subtitle-v1 lg:text-4xl ">
               <h2 className="text-green-subtitle ">
                 <Text tid="_aboutme" />
               </h2>
             </li>
           </ol>
         </div>
-        <subtitle className="text-green-subtitle-v1 max-w-3xl mt-7">
-          Hello! My name is Miguelangel and I enjoy creating things that live on
-          the internet. My interest in web development started back in 2012 when
-          I decided create a website for my dedicated Serve Mu online.
+        <subtitle className="text-green-subtitle-v1 lg:max-w-3xl lg:mt-7">
+          Hola, mi nombre es Miguelangel y disfruto de crear cosas. Mi interes
+          en la web comenzo en el 2008 cuando mi padre creo un server dedicado
+          de Mu online. Mi interes siguio creando servers dedicados de Counter
+          Strike 1.6 creando plugins con amx-mod y luego con Minecraft. Creando
+          un server dedicado llamado{" "}
+          <span className="text-green-text">Minecris</span> creando plugis con
+          Java.
         </subtitle>
-        <subtitle className="text-green-subtitle-v1 max-w-3xl mt-7">
-          Agregar emigrante Fast-forward to today, and I’ve had the privilege of
-          working at an advertising agency, a start-up, a huge corporation, and
-          a student-led design studio. My main focus these days is building
-          accessible, inclusive products and digital experiences at Upstatement
-          for a variety of clients.
+        {/* <subtitle className="text-green-subtitle-v1 lg:max-w-3xl lg:mt-7">
+          Tuve que huir de Venezuela para buscar una mejor vida. Fui a Colombia
+          donde hice diversos trabajos, Con ayuda de familia y amigos pude venir
+          a Argentina donde vivo actualmente.
         </subtitle>
-        <subtitle className="text-green-subtitle-v1 max-w-3xl mt-7">
-          I also recently launched a course that covers everything you need to
-          build a web app with the Spotify API using Node & React.
+        <subtitle className="text-green-subtitle-v1 lg:max-w-3xl lg:mt-7">
+          Tuve que ponerme al dia con las tecnologias y estudiar para seguir
+          adelante con lo que me apasionaba y habia abandonado.
+        </subtitle> */}
+        <subtitle className="text-green-subtitle-v1 lg:max-w-3xl mt-7">
+          Te te presento las tecnologias que hoy en dia domino.
         </subtitle>
-        <subtitle className="text-green-subtitle-v1 max-w-3xl mt-7">
-          Here are a few technologies I’ve been working with recently:
-        </subtitle>
-        JavaScript (ES6+) TypeScript React Eleventy Node.js WordPres
+        <ul className="list-disc text-green-subtitle marker:content-['▹'] grid grid-cols-2 mt-4 ml-6">
+          {tecnologies.map((t) => (
+            <li>
+              <span>{t}</span>
+            </li>
+          ))}
+        </ul>
       </div>
-      <div className="mt-28">
+      <div className="sm:w-56 sm:h-56 lg:w-80 lg:h-80 self-center">
         <ModelRender />
       </div>
     </div>
