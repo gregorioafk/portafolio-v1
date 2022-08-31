@@ -3,15 +3,22 @@ import { OrbitControls } from "@react-three/drei";
 import { Model } from "./Model";
 import { Canvas } from "@react-three/fiber";
 
-export const ModelRender = ({ children }) => {
+export const ModelRender = () => {
   return (
     <div>
       <Canvas
         camera={{ position: [1, 0, 12.25], fov: 15 }}
+        // eventPrefix="screen"
         style={{
           backgroundColor: "#142615",
-          width: "20rem",
-          height: "20rem",
+          "@media (min-width: 320px)": {
+            width: "30rem",
+            height: "30rem",
+          },
+          "@media (min-width: 700px)": {
+            width: "10rem",
+            height: "10rem",
+          },
         }}
       >
         <ambientLight intensity={1.25} />

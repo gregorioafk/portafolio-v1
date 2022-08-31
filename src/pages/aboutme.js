@@ -1,7 +1,8 @@
 import { Canvas } from "@react-three/fiber";
-import React from "react";
+import React, { useEffect } from "react";
 import { ModelRender } from "../components/Canvas";
 import { Text } from "../context/LanguageContext";
+import { useBreakPoint } from "../pages/mobile/breakpoints";
 
 const tecnologies = [
   "Javascript (ES6+)",
@@ -15,6 +16,8 @@ const tecnologies = [
 ];
 
 export const AboutMe = () => {
+  const breakpoint = useBreakPoint();
+  console.log(breakpoint);
   return (
     <div className="flex lg:flex-row sm:flex-col ">
       <div className="flex flex-col font-mono lg:ml-32 ">
@@ -56,9 +59,9 @@ export const AboutMe = () => {
           ))}
         </ul>
       </div>
-      <div className="sm:w-56 sm:h-56 lg:w-80 lg:h-80 self-center">
-        <ModelRender />
-      </div>
+      {/* <div className="sm:w-64 sm:h-64 lg:w-80 lg:h-80 md:self-center lg:self-start   ">
+        <ModelRender wh={breakpoint === "sm" ? "14rem" : "20rem"} />
+      </div> */}
     </div>
   );
 };
