@@ -41,17 +41,17 @@ export const App = () => {
       <section className="flex bg-green-dark h-screen justify-center px-6">
         <AboutMe />
       </section>
-      {/* <section id="experience" className="flex bg-green-dark h-full ">
+      <section id="experience" className="flex bg-green-dark h-full ">
         <Experience />
-      </section> */}
+      </section>
 
       {/* <section id="projects" className="flex bg-green-dark h-full ">
         <Projects />
       </section> */}
 
-      {/* <section id="contact" className="flex bg-green-dark h-full ">
+      <section id="contact" className="flex bg-green-dark h-full ">
         <Contact />
-      </section> */}
+      </section>
       {/* <Footer /> */}
     </div>
   );

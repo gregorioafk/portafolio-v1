@@ -56,7 +56,7 @@ export const Experience = () => {
   return (
     <div className="flex flex-row  w-full   ">
       <div className=" text-green-subtitle-v1 ">
-        <ol className="flex flex-row  ml-36 list-decimal ">
+        <ol className="flex flex-row  md:ml-36 list-decimal ">
           <li className="list-none"></li>
           <li className="text-green-subtitle-v1 text-4xl ">
             <h2 className="text-green-subtitle ">
@@ -64,24 +64,27 @@ export const Experience = () => {
             </h2>
           </li>
         </ol>
-        <div className="flex flex-row ml-32 mt-12">
-          <div className="flex flex-col font-mono ">
+        <div className="flex lg:flex-row sm:flex-col sm:justify-center lg:ml-32 lg:mt-12 sm:mt-12 sm:ml-16">
+          <div className="flex lg:flex-col sm:flex-row font-mono ">
             {works.map((work, index) => (
-              <div className="ml-3">
+              <div className="lg:ml-3 sm:ml-10">
                 <hr
-                  className={`absolute left-90 -ml-4 w-0.5 h-10 border-none ${
+                  className={`absolute  left-90 lg:ml-4 lg:w-0.5 sm:h-0.5 sm:w-40 lg:h-10 border-none ${
                     index === showWork
                       ? "bg-green-subtitle transition-colors "
                       : " bg-green-subtitle-v1 transition-colors "
                   }`}
                 />
-                <button className="h-10 " onClick={() => setShowWork(index)}>
+                <button
+                  className="lg:h-10 lg:ml-7 "
+                  onClick={() => setShowWork(index)}
+                >
                   {work.job}
                 </button>
               </div>
             ))}
           </div>
-          <div className="flex flex-col ml-32 justify-center w-4/5 ">
+          <div className="flex flex-col lg:ml-32 sm:ml-12 sm:mt-6 justify-center w-4/5 ">
             <div className="">
               <span className="font-sans text-gray-light font-bold text-xl">
                 {works[showWork].title}
