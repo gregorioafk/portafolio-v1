@@ -4,12 +4,12 @@ import { ModelRender } from "../components/Canvas";
 import { Text } from "../context/LanguageContext";
 
 const tecnologies = [
-  "Javascript (ES6+)",
-  "Typescript",
   "React",
   "React Native",
+  "Typescript",
+  "Angular",
   "Node.js",
-  "C#",
+  "C# (.NET)",
   "Java",
   "SQL",
 ];
@@ -28,25 +28,10 @@ export const AboutMe = () => {
           </ol>
         </div>
         <subtitle className="text-green-subtitle-v1 lg:max-w-3xl lg:mt-7">
-          Hola, mi nombre es Miguelangel y disfruto de crear cosas. Mi interes
-          en la web comenzo en el 2008 cuando mi padre creo un server dedicado
-          de Mu online. Mi interes siguio creando servers dedicados de Counter
-          Strike 1.6 creando plugins con amx-mod y luego con Minecraft. Creando
-          un server dedicado llamado{" "}
-          <span className="text-green-text">Minecris</span> creando plugis con
-          Java.
+          <Text tid="_descriptionaboutme" />
         </subtitle>
-        {/* <subtitle className="text-green-subtitle-v1 lg:max-w-3xl lg:mt-7">
-          Tuve que huir de Venezuela para buscar una mejor vida. Fui a Colombia
-          donde hice diversos trabajos, Con ayuda de familia y amigos pude venir
-          a Argentina donde vivo actualmente.
-        </subtitle>
-        <subtitle className="text-green-subtitle-v1 lg:max-w-3xl lg:mt-7">
-          Tuve que ponerme al dia con las tecnologias y estudiar para seguir
-          adelante con lo que me apasionaba y habia abandonado.
-        </subtitle> */}
         <subtitle className="text-green-subtitle-v1 lg:max-w-3xl mt-7">
-          Te te presento las tecnologias que hoy en dia domino.
+          <Text tid="_tecnologies" />
         </subtitle>
         <ul className="list-disc text-green-subtitle marker:content-['▹'] grid grid-cols-2 mt-4 ml-6">
           {tecnologies.map((t) => (

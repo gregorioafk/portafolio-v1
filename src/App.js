@@ -29,9 +29,9 @@ export const App = () => {
             Front-end developer
           </subtitle>
           <subtitle className="text-green-subtitle-v1 lg:max-w-3xl lg:mt-7 sm:text-sm">
-            I'm a software engineer specializing in building (and occasionally
-            designing) exceptional digital experiences. Currently, I'm focused
-            on building accessible, human-centered products at Upstatement.
+            I'm a software developer specializing in building exceptional
+            digital experiences. Currently, I'm focused on building
+            --------------------------------------------
           </subtitle>
           <button className="mt-12 w-3/12 text-green-subtitle-v1 outline outline-green-subtitle-v1 outline-2 outline-offset-4 sm:ml-16">
             Resumen
