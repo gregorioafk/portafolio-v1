@@ -8,7 +8,6 @@ import { Header } from "./components/Header";
 import { Experience } from "./pages/experience";
 import { Footer } from "./components/Footer";
 // import { useLocation, Routes, Route, Router } from "react-router-dom";
-import { Router } from "@reach/router";
 import { Home } from "./pages/home";
 
 export const App = () => {
