@@ -54,7 +54,7 @@ const works = [
 export const Experience = () => {
   const [showWork, setShowWork] = useState(0);
   return (
-    <div className="flex flex-row  w-full   ">
+    <div className="flex flex-row w-full ">
       <div className=" text-green-subtitle-v1 ">
         <ol className="flex flex-row  md:ml-36 list-decimal ">
           <li className="list-none"></li>

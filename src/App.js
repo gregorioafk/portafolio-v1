@@ -16,22 +16,25 @@ export const App = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <div className="bg-green-dark h-screen ">
+    <div className="bg-green-dark h-screen  ">
       <Header setPage={setPage} toggleMenu={[toggleMenu, setToggleMenu]} />
 
       <section
         id="home"
-        className="flex bg-green-dark h-screen justify-center px-6"
+        className=" flex bg-green-dark h-screen justify-center sm:pl-12 sm:pr-10 delay-[300ms] duration-[600ms] taos:scale-[0.6] taos:opacity-0"
       >
         <Home />
       </section>
       <section
         id="aboutme"
-        className="flex bg-green-dark h-screen justify-center px-6"
+        className="flex bg-green-dark h-screen justify-center sm:pl-12 sm:pr-10"
       >
         <AboutMe />
       </section>
-      {/* <section id="experience" className="flex bg-green-dark h-full ">
+      {/* <section
+        id="experience"
+        className="flex justify-center sm:pl-12 sm:pr-10 bg-green-dark h-full "
+      >
         <Experience />
       </section> */}
 

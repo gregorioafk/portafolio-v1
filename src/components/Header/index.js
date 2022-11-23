@@ -19,7 +19,7 @@ export const Header = ({ setPage, toggleMenu: [toggle, show] }) => {
 
       <div className="bg-green-dark  w-full items-center h-12 fixed sm:hidden md:flex  ">
         <div className="m-auto">
-          <ol className="flex flex-row gap-12 cursor-pointer list-decimal">
+          <ol className="flex flex-row gap-12 cursor-pointer list-spacecouter">
             <li
               className="text-green-subtitle-v1"
               onClick={() => setPage("aboutme")}

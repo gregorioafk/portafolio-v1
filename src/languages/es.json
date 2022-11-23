@@ -1,10 +1,12 @@
 {
-  "_greeting": "Hola, mi nombre es",
+  "_greeting": "Hi there, my name is",
   "_name": "Miguelangel Rojas",
-  "_headline": "y soy un capo",
-  "_aboutme": "Acerca de mi",
-  "_experience": "Experiencia",
-  "_work": "Proyectos",
-  "_workme": "Proyectos",
-  "_contact": "Contacto"
+  "_headline": "I'm a Full-stack Developer",
+  "_aboutme": "About me",
+  "_experience": "Experience",
+  "_work": "Work",
+  "_workme": "Where I've worked",
+  "_contact": "Contact",
+  "_about": "Self-motivation full-stack web developer with 5+ years involved in the whole software development life cycle providing IT solutions for private and public organizations using JavaScript, C#, Reactjs, Angular, Nodejs, Aiming to contribute to building world-class software solutions along with highly performant and dynamic teams.",
+  "_resumen": "Resumen"
 }

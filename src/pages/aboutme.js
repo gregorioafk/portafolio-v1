@@ -17,7 +17,7 @@ const tecnologies = [
 export const AboutMe = () => {
   return (
     <div className="flex lg:flex-row sm:flex-col ">
-      <div className="flex flex-col font-mono lg:ml-32 ">
+      <div className="flex flex-col font-mono justify-center ">
         <div>
           <ol className="flex flex-row lg:gap-12 lg:ml-14 list-decimal  sm:ml-7 sm:after:h-0.5 sm:after:w-2/4 sm:after:ml-10 after:bg-green-subtitle-v1 lg:after:w-2/4  lg:after:h-0.5 items-center">
             <li className="text-green-subtitle-v1 lg:text-4xl ">
