@@ -4,7 +4,7 @@ import { Text } from "../context/LanguageContext";
 export const Contact = () => {
   const phoneNumber = "+541123797550";
   const whatsappUrl = `https://wa.me/${phoneNumber.replace('+', '')}`;
-  const email = "contact@miguelangel.dev";
+  const email = "miguelangel.rojastech@gmail.com";
 
   return (
     <div className="flex flex-col font-mono justify-center w-full max-w-6xl mx-auto px-4 py-8 pt-16 md:pt-8">
