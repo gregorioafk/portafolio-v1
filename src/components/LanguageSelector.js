@@ -1,21 +1,29 @@
 import React, { useContext } from "react";
-
 import { languageOptions } from "../languages";
-import { LanguageContext } from "../containers/Language";
+import { LanguageContext } from "../context/LanguageContext";
 
 export default function LanguageSelector() {
   const { userLanguage, userLanguageChange } = useContext(LanguageContext);
 
-  // set selected language by calling context method
-  const handleLanguageChange = (e) => userLanguageChange(e.target.value);
+  const handleLanguageChange = (language) => {
+    userLanguageChange(language);
+  };
 
   return (
-    <select onChange={handleLanguageChange} value={userLanguage}>
+    <div className="flex items-center space-x-2">
       {Object.entries(languageOptions).map(([id, name]) => (
-        <option key={id} value={id}>
-          {name}
-        </option>
+        <button
+          key={id}
+          onClick={() => handleLanguageChange(id)}
+          className={`px-3 py-1 text-sm rounded border transition-colors duration-300 ${
+            userLanguage === id
+              ? "bg-green-subtitle text-green-dark border-green-subtitle"
+              : "text-green-subtitle-v1 border-green-subtitle-v1 hover:text-green-subtitle hover:border-green-subtitle"
+          }`}
+        >
+          {id.toUpperCase()}
+        </button>
       ))}
-    </select>
+    </div>
   );
 }

@@ -3,10 +3,12 @@ import "./App.css";
 import { AboutMe } from "./pages/aboutme";
 import { Contact } from "./pages/contact";
 import { Projects } from "./pages/projects";
+import { Services } from "./pages/services";
 import { Text, LanguageContext } from "./context/LanguageContext";
 import { Header } from "./components/Header";
 import { Experience } from "./pages/experience";
 import { Footer } from "./components/Footer";
+import { WhatsAppContact } from "./components/WhatsAppContact";
 // import { useLocation, Routes, Route, Router } from "react-router-dom";
 import { Home } from "./pages/home";
 
@@ -21,31 +23,39 @@ export const App = () => {
 
       <section
         id="home"
-        className=" flex bg-green-dark h-screen justify-center sm:pl-12 sm:pr-10 delay-[300ms] duration-[600ms] taos:scale-[0.6] taos:opacity-0"
+        className="flex bg-green-dark min-h-screen justify-center items-center delay-[300ms] duration-[600ms] taos:scale-[0.6] taos:opacity-0"
       >
         <Home />
       </section>
       <section
         id="aboutme"
-        className="flex bg-green-dark h-screen justify-center sm:pl-12 sm:pr-10"
+        className="flex bg-green-dark min-h-screen justify-center items-center"
       >
         <AboutMe />
       </section>
-      {/* <section
-        id="experience"
-        className="flex justify-center sm:pl-12 sm:pr-10 bg-green-dark h-full "
+      
+      <section
+        id="services"
+        className="flex bg-green-dark min-h-screen justify-center items-center"
       >
-        <Experience />
-      </section> */}
+        <Services />
+      </section>
 
-      {/* <section id="projects" className="flex bg-green-dark h-full ">
+      <section 
+        id="projects" 
+        className="flex bg-green-dark min-h-screen justify-center items-center"
+      >
         <Projects />
-      </section> */}
+      </section>
 
-      {/* <section id="contact" className="flex bg-green-dark h-full ">
+      <section 
+        id="contact" 
+        className="flex bg-green-dark min-h-screen justify-center items-center"
+      >
         <Contact />
-      </section> */}
-      {/* <Footer /> */}
+      </section>
+      
+      <WhatsAppContact />
     </div>
   );
 };

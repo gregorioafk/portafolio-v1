@@ -16,48 +16,40 @@ const tecnologies = [
 
 export const AboutMe = () => {
   return (
-    <div className="flex lg:flex-row sm:flex-col ">
-      <div className="flex flex-col font-mono justify-center ">
+    <div className="flex flex-col lg:flex-row w-full max-w-6xl mx-auto px-4 py-8 pt-16 md:pt-8">
+      <div className="flex flex-col font-mono justify-center w-full lg:w-2/3">
         <div>
-          <ol className="flex flex-row lg:gap-12 lg:ml-14 list-decimal  sm:ml-7 sm:after:h-0.5 sm:after:w-2/4 sm:after:ml-10 after:bg-green-subtitle-v1 lg:after:w-2/4  lg:after:h-0.5 items-center">
-            <li className="text-green-subtitle-v1 lg:text-4xl ">
-              <h2 className="text-green-subtitle ">
+          <ol className="flex flex-row gap-4 lg:gap-12 ml-4 lg:ml-14 list-decimal after:h-0.5 after:w-1/2 after:ml-4 lg:after:ml-10 after:bg-green-subtitle-v1 items-center">
+            <li className="text-green-subtitle-v1 text-2xl lg:text-4xl">
+              <h2 className="text-green-subtitle">
                 <Text tid="_aboutme" />
               </h2>
             </li>
           </ol>
         </div>
-        <subtitle className="text-green-subtitle-v1 lg:max-w-3xl lg:mt-7">
-          Hola, mi nombre es Miguelangel y disfruto de crear cosas. Mi interes
-          en la web comenzo en el 2008 cuando mi padre creo un server dedicado
-          de Mu online. Mi interes siguio creando servers dedicados de Counter
-          Strike 1.6 creando plugins con amx-mod y luego con Minecraft. Creando
-          un server dedicado llamado{" "}
-          <span className="text-green-text">Minecris</span> creando plugis con
-          Java.
-        </subtitle>
-        {/* <subtitle className="text-green-subtitle-v1 lg:max-w-3xl lg:mt-7">
-          Tuve que huir de Venezuela para buscar una mejor vida. Fui a Colombia
-          donde hice diversos trabajos, Con ayuda de familia y amigos pude venir
-          a Argentina donde vivo actualmente.
-        </subtitle>
-        <subtitle className="text-green-subtitle-v1 lg:max-w-3xl lg:mt-7">
-          Tuve que ponerme al dia con las tecnologias y estudiar para seguir
-          adelante con lo que me apasionaba y habia abandonado.
-        </subtitle> */}
-        <subtitle className="text-green-subtitle-v1 lg:max-w-3xl mt-7">
-          Te te presento las tecnologias que hoy en dia domino.
-        </subtitle>
-        <ul className="list-disc text-green-subtitle marker:content-['▹'] grid grid-cols-2 mt-4 ml-6">
-          {tecnologies.map((t) => (
-            <li>
+        <div className="text-green-subtitle-v1 max-w-full lg:max-w-3xl mt-6 lg:mt-7 space-y-6">
+          <p className="leading-relaxed">
+            <Text tid="_aboutme_intro" />
+          </p>
+          <p className="leading-relaxed">
+            <Text tid="_aboutme_experience" />
+          </p>
+          <p className="leading-relaxed">
+            <Text tid="_aboutme_tech" />
+          </p>
+        </div>
+        <ul className="list-disc text-green-subtitle marker:content-['▹'] grid grid-cols-1 sm:grid-cols-2 gap-2 mt-6 ml-6 max-w-lg">
+          {tecnologies.map((t, index) => (
+            <li key={index}>
               <span>{t}</span>
             </li>
           ))}
         </ul>
       </div>
-      <div className="sm:w-56 sm:h-56 lg:w-80 lg:h-80 self-center">
-        {/* <ModelRender  w={}/> */}
+      <div className="w-full lg:w-1/3 flex justify-center items-center mt-8 lg:mt-0">
+        <div className="w-48 h-48 sm:w-56 sm:h-56 lg:w-80 lg:h-80 bg-green-dark rounded-lg border border-green-subtitle-v1/20 flex items-center justify-center">
+          <span className="text-green-subtitle-v1 text-sm">Profile Image</span>
+        </div>
       </div>
     </div>
   );

@@ -2,21 +2,21 @@ import React from "react";
 import { Text } from "../context/LanguageContext";
 
 export const Home = () => (
-  <div className="flex flex-col font-mono justify-center ">
-    <subtitle className="text-green-subtitle-v1 lg:text-2xl  ">
+  <div className="flex flex-col font-mono justify-center w-full max-w-6xl mx-auto px-4 py-8 pt-16 md:pt-8">
+    <div className="text-green-subtitle-v1 text-lg md:text-2xl mb-4">
       <Text tid="_greeting" />
-    </subtitle>
-    <subtitle className="text-green-subtitle lg:text-7xl sm:text-sm">
+    </div>
+    <h1 className="text-green-subtitle text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
       <Text tid="_name" />
-    </subtitle>
-    <subtitle className="text-green-subtitle-v1 lg:text-7xl mt-4 sm:text-sm">
+    </h1>
+    <h2 className="text-green-subtitle-v1 text-3xl md:text-5xl lg:text-7xl mb-8">
       <Text tid="_headline" />
-    </subtitle>
+    </h2>
 
-    <subtitle className="text-green-subtitle-v1 lg:max-w-3xl mt-7 sm:text-sm">
+    <p className="text-green-subtitle-v1 max-w-full lg:max-w-3xl text-base md:text-lg leading-relaxed mb-12">
       <Text tid="_about" />
-    </subtitle>
-    <button className="mt-12 w-3/12 text-green-subtitle-v1 outline outline-green-subtitle-v1 outline-2 outline-offset-4 sm:ml-16">
+    </p>
+    <button className="w-full sm:w-auto max-w-xs px-8 py-3 text-green-subtitle-v1 border border-green-subtitle-v1 rounded hover:bg-green-subtitle hover:text-green-dark transition-colors duration-300 text-center">
       <Text tid="_resumen" />
     </button>
   </div>
