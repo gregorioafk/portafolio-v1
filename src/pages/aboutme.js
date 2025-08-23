@@ -1,6 +1,3 @@
-import { Canvas } from "@react-three/fiber";
-import React from "react";
-import { ModelRender } from "../components/Canvas";
 import { Text } from "../context/LanguageContext";
 
 const tecnologies = [
