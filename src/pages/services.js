@@ -1,64 +1,47 @@
 import React from "react";
 import { Text } from "../context/LanguageContext";
 
-const services = [
-  {
-    title: "_web_development",
-    description: "_web_development_desc",
-    icon: "💻",
-  },
-  {
-    title: "_mobile_development", 
-    description: "_mobile_development_desc",
-    icon: "📱",
-  },
-  {
-    title: "_software_maintenance",
-    description: "_software_maintenance_desc", 
-    icon: "🔧",
-  },
-  {
-    title: "_consulting",
-    description: "_consulting_desc",
-    icon: "💡",
-  },
-];
-
 export const Services = () => {
   return (
-    <div className="flex flex-col font-mono justify-center w-full max-w-6xl mx-auto px-4 py-8 pt-16 md:pt-8">
-      <div>
-        <ol className="flex flex-row gap-4 lg:gap-12 ml-4 lg:ml-14 list-decimal after:h-0.5 after:w-1/2 after:ml-4 lg:after:ml-10 after:bg-green-subtitle-v1 items-center">
-          <li className="text-green-subtitle-v1 text-2xl lg:text-4xl">
-            <h2 className="text-green-subtitle">
-              <Text tid="_services_title" />
-            </h2>
-          </li>
-        </ol>
-      </div>
-      
-      <p className="text-green-subtitle-v1 max-w-full lg:max-w-3xl mt-6 lg:mt-7 leading-relaxed">
-        <Text tid="_services_description" />
+    <div className="flex flex-col font-mono justify-center w-full max-w-4xl px-4">
+      <h2 className="text-black text-lg font-semibold mb-2">
+        Software Services
+      </h2>
+
+      <p className="text-gray-600 mb-6 text-sm">
+        I offer comprehensive software development services, from web applications to custom solutions tailored to your business needs.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-8 w-full">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="border border-green-subtitle-v1 rounded-lg p-4 md:p-6 hover:border-green-subtitle transition-colors duration-300"
-          >
-            <div className="flex items-center mb-4">
-              <span className="text-2xl mr-3">{service.icon}</span>
-              <h3 className="text-green-subtitle text-lg md:text-xl">
-                <Text tid={service.title} />
-              </h3>
-            </div>
-            <p className="text-green-subtitle-v1 text-sm md:text-base leading-relaxed">
-              <Text tid={service.description} />
-            </p>
+      <ul className="space-y-3 text-sm">
+        <li className="flex items-start">
+          <span className="text-gray-400 mr-2">•</span>
+          <div>
+            <strong className="text-black">Web Development:</strong>
+            <span className="text-gray-600 ml-1">Custom web applications using modern technologies like React, Node.js, and more.</span>
           </div>
-        ))}
-      </div>
+        </li>
+        <li className="flex items-start">
+          <span className="text-gray-400 mr-2">•</span>
+          <div>
+            <strong className="text-black">Mobile Development:</strong>
+            <span className="text-gray-600 ml-1">Native and cross-platform mobile applications for iOS and Android.</span>
+          </div>
+        </li>
+        <li className="flex items-start">
+          <span className="text-gray-400 mr-2">•</span>
+          <div>
+            <strong className="text-black">Software Maintenance:</strong>
+            <span className="text-gray-600 ml-1">Ongoing support and maintenance for existing software systems.</span>
+          </div>
+        </li>
+        <li className="flex items-start">
+          <span className="text-gray-400 mr-2">•</span>
+          <div>
+            <strong className="text-black">Technical Consulting:</strong>
+            <span className="text-gray-600 ml-1">Expert advice on technology stack selection and software architecture.</span>
+          </div>
+        </li>
+      </ul>
     </div>
   );
 };

@@ -18,43 +18,23 @@ export const App = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <div className="bg-green-dark h-screen  ">
-      <Header setPage={setPage} toggleMenu={[toggleMenu, setToggleMenu]} />
-
-      <section
-        id="home"
-        className="flex bg-green-dark min-h-screen justify-center items-center delay-[300ms] duration-[600ms] taos:scale-[0.6] taos:opacity-0"
-      >
+    <div className="bg-white mx-10">
+      <div className="">
         <Home />
-      </section>
-      <section
-        id="aboutme"
-        className="flex bg-green-dark min-h-screen justify-center items-center"
-      >
+      </div>
+      <div className="">
         <AboutMe />
-      </section>
-      
-      <section
-        id="services"
-        className="flex bg-green-dark min-h-screen justify-center items-center"
-      >
+      </div>
+      <div className="">
         <Services />
-      </section>
-
-      <section 
-        id="projects" 
-        className="flex bg-green-dark min-h-screen justify-center items-center"
-      >
+      </div>
+      <div className="">
         <Projects />
-      </section>
-
-      <section 
-        id="contact" 
-        className="flex bg-green-dark min-h-screen justify-center items-center"
-      >
+      </div>
+      <div className="">
         <Contact />
-      </section>
-      
+      </div>
+
       <WhatsAppContact />
     </div>
   );

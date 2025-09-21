@@ -6,13 +6,13 @@ export const Header = ({ setPage, toggleMenu: [toggle, show] }) => {
   return (
     <header className="font-mono">
       {/* Mobile Header */}
-      <div className="md:hidden bg-green-dark w-full h-12 fixed top-0 z-50 flex justify-between items-center px-4">
-        <div className="text-green-subtitle font-bold">
+      <div className="md:hidden bg-white border-b border-gray-200 w-full h-12 fixed top-0 z-50 flex justify-between items-center px-4">
+        <div className="text-black font-medium text-sm">
           <Text tid="_name" />
         </div>
         <button
           onClick={() => show(!toggle)}
-          className="text-green-subtitle-v1 hover:text-green-subtitle transition-colors duration-300"
+          className="text-gray-600 hover:text-black"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {toggle ? (
@@ -26,32 +26,32 @@ export const Header = ({ setPage, toggleMenu: [toggle, show] }) => {
 
       {/* Mobile Menu Overlay */}
       {toggle && (
-        <div className="md:hidden fixed inset-0 z-40 bg-green-dark bg-opacity-95">
+        <div className="md:hidden fixed inset-0 z-40 bg-white">
           <div className="flex flex-col items-center justify-center h-full">
-            <nav className="text-green-subtitle-v1">
-              <ol className="list-decimal space-y-8 text-center">
+            <nav className="text-black">
+              <ol className="space-y-6 text-center">
                 <li onClick={() => { setPage("home"); show(false); }}>
-                  <a href="#home" className="text-green-subtitle hover:text-green-subtitle-v1 duration-300 text-xl">
+                  <a href="#home" className="text-gray-600 hover:text-black text-base">
                     <Text tid="_home" />
                   </a>
                 </li>
                 <li onClick={() => { setPage("aboutme"); show(false); }}>
-                  <a href="#aboutme" className="text-green-subtitle hover:text-green-subtitle-v1 duration-300 text-xl">
+                  <a href="#aboutme" className="text-gray-600 hover:text-black text-base">
                     <Text tid="_aboutme" />
                   </a>
                 </li>
                 <li onClick={() => { setPage("services"); show(false); }}>
-                  <a href="#services" className="text-green-subtitle hover:text-green-subtitle-v1 duration-300 text-xl">
+                  <a href="#services" className="text-gray-600 hover:text-black text-base">
                     <Text tid="_services" />
                   </a>
                 </li>
                 <li onClick={() => { setPage("projects"); show(false); }}>
-                  <a href="#projects" className="text-green-subtitle hover:text-green-subtitle-v1 duration-300 text-xl">
+                  <a href="#projects" className="text-gray-600 hover:text-black text-base">
                     <Text tid="_projects" />
                   </a>
                 </li>
                 <li onClick={() => { setPage("contact"); show(false); }}>
-                  <a href="#contact" className="text-green-subtitle hover:text-green-subtitle-v1 duration-300 text-xl">
+                  <a href="#contact" className="text-gray-600 hover:text-black text-base">
                     <Text tid="_contact" />
                   </a>
                 </li>
@@ -64,61 +64,31 @@ export const Header = ({ setPage, toggleMenu: [toggle, show] }) => {
         </div>
       )}
 
-      <div className="bg-green-dark w-full items-center h-12 fixed sm:hidden md:flex justify-between px-8">
+      <div className="bg-white border-b border-gray-200 w-full items-center h-12 fixed sm:hidden md:flex justify-between px-8">
         <div className="flex">
-          <ol className="flex flex-row gap-12 cursor-pointer list-spacecouter">
-            <li
-              className="text-green-subtitle-v1"
-              onClick={() => setPage("home")}
-            >
-              <a
-                href="#home"
-                className="text-green-subtitle hover:text-green-subtitle-v1 duration-300"
-              >
+          <ol className="flex flex-row gap-8 cursor-pointer">
+            <li onClick={() => setPage("home")}>
+              <a href="#home" className="text-gray-600 hover:text-black text-sm">
                 <Text tid="_home" />
               </a>
             </li>
-            <li
-              className="text-green-subtitle-v1"
-              onClick={() => setPage("aboutme")}
-            >
-              <a
-                href="#aboutme"
-                className="text-green-subtitle hover:text-green-subtitle-v1 duration-300"
-              >
+            <li onClick={() => setPage("aboutme")}>
+              <a href="#aboutme" className="text-gray-600 hover:text-black text-sm">
                 <Text tid="_aboutme" />
               </a>
             </li>
-            <li
-              className="text-green-subtitle-v1"
-              onClick={() => setPage("services")}
-            >
-              <a
-                href="#services"
-                className="text-green-subtitle hover:text-green-subtitle-v1 duration-300"
-              >
+            <li onClick={() => setPage("services")}>
+              <a href="#services" className="text-gray-600 hover:text-black text-sm">
                 <Text tid="_services" />
               </a>
             </li>
-            <li
-              className="text-green-subtitle-v1"
-              onClick={() => setPage("projects")}
-            >
-              <a
-                href="#projects"
-                className="text-green-subtitle hover:text-green-subtitle-v1 duration-300"
-              >
+            <li onClick={() => setPage("projects")}>
+              <a href="#projects" className="text-gray-600 hover:text-black text-sm">
                 <Text tid="_projects" />
               </a>
             </li>
-            <li
-              className="text-green-subtitle-v1"
-              onClick={() => setPage("contact")}
-            >
-              <a
-                href="#contact"
-                className="text-green-subtitle hover:text-green-subtitle-v1 duration-300"
-              >
+            <li onClick={() => setPage("contact")}>
+              <a href="#contact" className="text-gray-600 hover:text-black text-sm">
                 <Text tid="_contact" />
               </a>
             </li>
