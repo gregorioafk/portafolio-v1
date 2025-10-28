@@ -168,6 +168,7 @@ export const Home = () => (
             <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Angular</span>
             <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Next.js</span>
             <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Node.js</span>
+            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">NestJS</span>
             <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Express</span>
             <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">.NET</span>
             <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Ionic</span>
