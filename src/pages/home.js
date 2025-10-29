@@ -64,7 +64,7 @@ export const Home = () => (
       Hello, I'm
     </div>
     <h1 className="text-black text-2xl md:text-3xl font-bold mb-2">
-      Miguel Ángel Rojas
+      Miguelangel Rojas
     </h1>
     <h2 className="text-gray-600 text-xl md:text-2xl mb-6">
       Full Stack Developer
