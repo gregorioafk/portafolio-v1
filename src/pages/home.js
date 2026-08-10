@@ -2,6 +2,17 @@ import React from "react";
 
 const experiences = [
   {
+    company: "Independent Consultant",
+    position: "Payment Gateway & Cryptocurrency Integration Consultant (PMO)",
+    period: "Aug 2025 - Present",
+    responsibilities: [
+      "Consulting on end-to-end payment gateway and cryptocurrency integrations for web platforms",
+      "Acting as PMO: planning, coordinating and tracking integration projects across teams and providers",
+      "Advising on architecture, security and best practices for payment and crypto transaction flows"
+    ],
+    techStack: "Payment Gateways, Cryptocurrency, Blockchain, REST APIs, Node.js, TypeScript, Project Management, Scrum"
+  },
+  {
     company: "Bidcom",
     position: "Full-stack Developer",
     period: "April 2025 - Present",
@@ -60,42 +71,42 @@ const experiences = [
 
 export const Home = () => (
   <div className="flex flex-col font-mono justify-center w-full max-w-4xl px-4 pt-8">
-    <div className="text-gray-600 text-sm mb-2">
+    <div className="text-gray-300 text-sm mb-2">
       Hello, I'm
     </div>
-    <h1 className="text-black text-2xl md:text-3xl font-bold mb-2">
+    <h1 className="text-white text-2xl md:text-3xl font-bold mb-2">
       Miguelangel Rojas
     </h1>
-    <h2 className="text-gray-600 text-xl md:text-2xl mb-6">
+    <h2 className="text-gray-300 text-xl md:text-2xl mb-6">
       Full Stack Developer
     </h2>
 
-    <p className="text-gray-600 max-w-full lg:max-w-2xl text-sm leading-relaxed mb-8">
+    <p className="text-gray-300 max-w-full lg:max-w-2xl text-sm leading-relaxed mb-8">
       Full-Stack Developer with 5+ years of experience building scalable, secure, and maintainable web and mobile applications. Skilled in JavaScript, TypeScript, React, Angular, Node.js, and .NET. Strong background in software architecture, REST APIs, CI/CD, and Agile/Scrum. Passionate about solving complex problems and delivering high-quality digital solutions.
     </p>
 
     <a
       href="mailto:miguelangel.rojastech@gmail.com"
-      className="w-auto px-4 py-2 text-black border border-gray-300 rounded hover:bg-gray-100 text-sm inline-block text-center mb-12"
+      className="w-auto px-4 py-2 text-white border border-gray-600 rounded hover:bg-gray-800 text-sm inline-block text-center mb-12"
     >
       Get in touch
     </a>
 
     {/* Experience Section */}
     <div className="mt-8 mb-12">
-      <h2 className="text-black text-lg font-semibold mb-6">Experience</h2>
+      <h2 className="text-white text-lg font-semibold mb-6">Experience</h2>
 
       <div className="space-y-8">
         {experiences.map((exp, index) => (
-          <div key={index} className="border-l-2 border-gray-200 pl-4">
+          <div key={index} className="border-l-2 border-gray-700 pl-4">
             <div className="mb-2">
-              <h3 className="text-black font-semibold text-base">{exp.position}</h3>
-              <p className="text-gray-600 text-sm">{exp.company} • {exp.period}</p>
+              <h3 className="text-white font-semibold text-base">{exp.position}</h3>
+              <p className="text-gray-300 text-sm">{exp.company} • {exp.period}</p>
             </div>
 
             <ul className="space-y-1 mb-3">
               {exp.responsibilities.map((resp, idx) => (
-                <li key={idx} className="flex items-start text-xs text-gray-600">
+                <li key={idx} className="flex items-start text-xs text-gray-300">
                   <span className="text-gray-400 mr-2">•</span>
                   <span>{resp}</span>
                 </li>
@@ -103,8 +114,8 @@ export const Home = () => (
             </ul>
 
             <div className="text-xs">
-              <span className="text-gray-500">Tech Stack: </span>
-              <span className="text-gray-600">{exp.techStack}</span>
+              <span className="text-gray-400">Tech Stack: </span>
+              <span className="text-gray-300">{exp.techStack}</span>
             </div>
           </div>
         ))}
@@ -113,30 +124,14 @@ export const Home = () => (
 
     {/* Projects Section */}
     <div className="mt-8 mb-12">
-      <h2 className="text-black text-lg font-semibold mb-6">Projects</h2>
+      <h2 className="text-white text-lg font-semibold mb-6">Projects</h2>
 
       <div className="space-y-6">
-        <div className="border-l-2 border-gray-200 pl-4">
-          <h3 className="text-black font-semibold text-sm">LetBookly</h3>
-          <p className="text-gray-600 text-xs mb-1">Booking platform for vacation rentals and accommodations</p>
-          <a href="https://letbookly.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline text-xs">
-            https://letbookly.com
-          </a>
-        </div>
-
-        <div className="border-l-2 border-gray-200 pl-4">
-          <h3 className="text-black font-semibold text-sm">Innova Hipotecaria</h3>
-          <p className="text-gray-600 text-xs mb-1">Mortgage and real estate services platform</p>
-          <a href="https://innovahipotecaria.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline text-xs">
+        <div className="border-l-2 border-gray-700 pl-4">
+          <h3 className="text-white font-semibold text-sm">Innova Hipotecaria</h3>
+          <p className="text-gray-300 text-xs mb-1">Mortgage and real estate services platform</p>
+          <a href="https://innovahipotecaria.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline text-xs">
             https://innovahipotecaria.com
-          </a>
-        </div>
-
-        <div className="border-l-2 border-gray-200 pl-4">
-          <h3 className="text-black font-semibold text-sm">QueWallet</h3>
-          <p className="text-gray-600 text-xs mb-1">Digital wallet and payment platform</p>
-          <a href="https://quewallet.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline text-xs">
-            https://quewallet.com
           </a>
         </div>
       </div>
@@ -144,73 +139,73 @@ export const Home = () => (
 
     {/* Skills Section */}
     <div className="mt-8 mb-12">
-      <h2 className="text-black text-lg font-semibold mb-6">Skills</h2>
+      <h2 className="text-white text-lg font-semibold mb-6">Skills</h2>
 
       <div className="space-y-6">
         <div>
-          <h3 className="text-black text-sm font-semibold mb-3">Programming Languages</h3>
+          <h3 className="text-white text-sm font-semibold mb-3">Programming Languages</h3>
           <div className="flex flex-wrap gap-2">
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">JavaScript (ES6+)</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">TypeScript</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">HTML</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">CSS</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">C#</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">SQL</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">GraphQL</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">JavaScript (ES6+)</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">TypeScript</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">HTML</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">CSS</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">C#</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">SQL</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">GraphQL</span>
           </div>
         </div>
 
         <div>
-          <h3 className="text-black text-sm font-semibold mb-3">Frameworks & Tools</h3>
+          <h3 className="text-white text-sm font-semibold mb-3">Frameworks & Tools</h3>
           <div className="flex flex-wrap gap-2">
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">React</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">React Native</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Angular</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Next.js</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Node.js</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">NestJS</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Express</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">.NET</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Ionic</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">tRPC</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Prisma</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Tailwind CSS</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Material UI</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Bootstrap</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Styled Components</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">React</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">React Native</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">Angular</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">Next.js</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">Node.js</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">NestJS</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">Express</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">.NET</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">Ionic</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">tRPC</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">Prisma</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">Tailwind CSS</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">Material UI</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">Bootstrap</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">Styled Components</span>
           </div>
         </div>
 
         <div>
-          <h3 className="text-black text-sm font-semibold mb-3">Databases & Cloud</h3>
+          <h3 className="text-white text-sm font-semibold mb-3">Databases & Cloud</h3>
           <div className="flex flex-wrap gap-2">
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">PostgreSQL</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">MongoDB</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">MySQL</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">AWS</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Azure</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">PostgreSQL</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">MongoDB</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">MySQL</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">AWS</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">Azure</span>
           </div>
         </div>
 
         <div>
-          <h3 className="text-black text-sm font-semibold mb-3">Agile & Tools</h3>
+          <h3 className="text-white text-sm font-semibold mb-3">Agile & Tools</h3>
           <div className="flex flex-wrap gap-2">
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Scrum</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Jira</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Trello</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">ClickUp</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Git</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">GitHub/GitLab</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Slack</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Microsoft Teams</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">Scrum</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">Jira</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">Trello</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">ClickUp</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">Git</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">GitHub/GitLab</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">Slack</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">Microsoft Teams</span>
           </div>
         </div>
 
         <div>
-          <h3 className="text-black text-sm font-semibold mb-3">Languages</h3>
+          <h3 className="text-white text-sm font-semibold mb-3">Languages</h3>
           <div className="flex flex-wrap gap-2">
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">Spanish (Native)</span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-xs">English (Intermediate)</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">Spanish (Native)</span>
+            <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded text-xs">English (Intermediate)</span>
           </div>
         </div>
       </div>
@@ -218,41 +213,41 @@ export const Home = () => (
 
     {/* Education Section */}
     <div className="mt-8 mb-12">
-      <h2 className="text-black text-lg font-semibold mb-4">Education</h2>
-      <div className="border-l-2 border-gray-200 pl-4">
-        <h3 className="text-black font-semibold text-sm">Computer Science</h3>
-        <p className="text-gray-600 text-xs">Instituto Universitario de Tecnología del Estado Bolívar – Venezuela</p>
-        <p className="text-gray-500 text-xs">Graduated: October 2018</p>
+      <h2 className="text-white text-lg font-semibold mb-4">Education</h2>
+      <div className="border-l-2 border-gray-700 pl-4">
+        <h3 className="text-white font-semibold text-sm">Computer Science</h3>
+        <p className="text-gray-300 text-xs">Instituto Universitario de Tecnología del Estado Bolívar – Venezuela</p>
+        <p className="text-gray-400 text-xs">Graduated: October 2018</p>
       </div>
     </div>
 
     {/* Contact Section */}
     <div className="mt-8 mb-16">
-      <h2 className="text-black text-lg font-semibold mb-4">Contact</h2>
-      <p className="text-gray-600 mb-4 text-sm">
+      <h2 className="text-white text-lg font-semibold mb-4">Contact</h2>
+      <p className="text-gray-300 mb-4 text-sm">
         Ready to work together? Let's discuss your next project and bring your ideas to life.
       </p>
 
       <div className="space-y-3">
-        <div className="border-l-2 border-gray-200 pl-4">
-          <span className="text-black text-sm font-semibold">WhatsApp</span>
+        <div className="border-l-2 border-gray-700 pl-4">
+          <span className="text-white text-sm font-semibold">WhatsApp</span>
           <br />
           <a
             href="https://wa.me/541123797550"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline text-xs"
+            className="text-blue-400 hover:underline text-xs"
           >
             +54 11 2379 7550
           </a>
         </div>
 
-        <div className="border-l-2 border-gray-200 pl-4">
-          <span className="text-black text-sm font-semibold">Email</span>
+        <div className="border-l-2 border-gray-700 pl-4">
+          <span className="text-white text-sm font-semibold">Email</span>
           <br />
           <a
             href="mailto:miguelangel.rojastech@gmail.com"
-            className="text-blue-600 hover:underline text-xs"
+            className="text-blue-400 hover:underline text-xs"
           >
             miguelangel.rojastech@gmail.com
           </a>
